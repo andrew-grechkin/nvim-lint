@@ -13,7 +13,6 @@ return function()
             local diagnostics = {}
             for _, message in ipairs(result) do
                 local ok, decoded = pcall(vim.json.decode, message)
-                local decoded = vim.json.decode(message)
                 if ok then
                     table.insert(diagnostics, {
                         source = 'perlimports',
