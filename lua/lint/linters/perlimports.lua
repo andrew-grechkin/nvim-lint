@@ -5,6 +5,7 @@ return function()
     return {
         cmd = 'perlimports',
         stdin = true,
+        ignore_exitcode = true,
         args = {'--lint', '--json', '--filename', filename},
         stream = 'stderr',
         parser = function(output)
